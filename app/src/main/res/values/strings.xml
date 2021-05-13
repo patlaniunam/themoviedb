@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TheMovieDB</string>
+    <string name="tip_top_rated">Películas mejor evaluadas</string>
+    <string name="title_top_rated">TopRatedMovies</string>
+    <string name="tip_error">Ocurrió un error.</string>
+    <string name="label_retry">Reintentar</string>
+    <string name="label_title">Título:</string>
+    <string name="label_vote">Calificación:</string>
+    <string name="label_release">Fecha de estreno:</string>
+    <string name="label_overview">Sinopsis</string>
+</resources>
