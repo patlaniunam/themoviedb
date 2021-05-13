@@ -34,7 +34,8 @@ public class DetailMovieModel implements DetailMovie.Model {
                 MovieDetailDTO detail = response.body();
                 if (detail != null)
                     consumer.consume(new Result<>(detail));
-                else onFailure(call, new NullPointerException());
+                else
+                    onFailure(call, new NullPointerException());
             }
 
             @Override

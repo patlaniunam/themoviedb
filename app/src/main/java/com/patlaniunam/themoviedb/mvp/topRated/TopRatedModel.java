@@ -38,7 +38,8 @@ public class TopRatedModel implements TopRated.Model {
                 MovieListResponseDTO movies = response.body();
                 if (movies != null)
                     consumer.consume(new Result<>(movies.getResults()));
-                else onFailure(call, new NullPointerException());
+                else
+                    onFailure(call, new NullPointerException());
             }
 
             @Override

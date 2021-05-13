@@ -41,7 +41,7 @@
             tools:text="Título de la película"
             android:lines="3"
             android:textColor="@color/black"
-            android:ellipsize="marquee"
+            android:ellipsize="end"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image"/>

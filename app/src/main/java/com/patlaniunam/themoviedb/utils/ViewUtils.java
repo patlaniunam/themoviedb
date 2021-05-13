@@ -32,22 +32,20 @@ public class ViewUtils {
      * @param loader Vista que se muestra durante la carga de la imagen.
      */
     public static void setImage(ImageView image, String path, View loader) {
-        if (loader != null)
-            loader.setVisibility(View.VISIBLE);
+        loader.setVisibility(View.VISIBLE);
+        image.setAlpha(0f);
         Glide.with(image.getContext())
                 .load(BASE_URL_IMAGES + path)
                 .listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                        if (loader != null)
-                            loader.setVisibility(View.GONE);
+                        loader.setVisibility(View.GONE);
                         return false;
                     }
 
                     @Override
                     public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                        if (loader != null)
-                            loader.setVisibility(View.GONE);
+                        loader.setVisibility(View.GONE);
                         image.animate().alpha(1f);
                         return false;
                     }

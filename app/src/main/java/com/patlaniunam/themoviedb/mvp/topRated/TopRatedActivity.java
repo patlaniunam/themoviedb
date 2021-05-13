@@ -94,7 +94,7 @@ public class TopRatedActivity extends AppCompatActivity implements TopRated.View
 
     @Override
     public void setLoading(boolean isLoading) {
-        setVisibility(findViewById(R.id.loader), isLoading);
+        setVisibility(loader, isLoading);
     }
 
     @Override
